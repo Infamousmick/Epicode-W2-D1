@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+main {
+    padding: 30px;
+}
+
+.card {
+    width: 360px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.858);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+.card::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.8s;
+}
+
+.card:hover::before {
+    background-color: rgba(0, 0, 0, 0.311);
+}
+
+.bottom {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    bottom: -100px;
+    left: 0;
+    text-align: center;
+    transition: transform 0.8s;
+}
+
+.saveBtn {
+    position: absolute;
+    top: -100px;
+    right: 20px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    background-color: #D32D2F;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    transition: transform 0.8s;
+}
+
+
+
+.saveBtn, .linkBtn, .shareBtn, .moreBtn {
+    border-radius: 30px;
+    align-content: center;
+}
+
+.linkBtn, .shareBtn, .moreBtn {
+    background-color: white;
+    height: 30px;
+    font-size: 1.1em;
+    display: inline-block;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+
+.linkBtn {
+    width: 200px;
+}
+
+p.linkBtn i {
+    margin-right: 20px;
+}
+
+
+.linkBtn a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+/* 
+.linkBtn a:visited {
+    color: #225c93;
+} */
+
+.shareBtn, .moreBtn {
+    width: 30px;
+}
+
+.card:hover .saveBtn {
+    transform: translateY(120px)
+}
+
+.card:hover .bottom {
+    transform: translateY(-120px)
+}
